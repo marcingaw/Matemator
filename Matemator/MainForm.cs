@@ -47,7 +47,7 @@ namespace Matemator {
             results[7] = result_07;
 
             for (int k = 0; k < challenges.Length; k++) {
-                challenges[k] = new Challenge(1000, 100);
+                challenges[k] = new Challenge(100, false);
                 ops[k].Text = "" + challenges[k].Operator;
 
                 if (challenges[k].ShowLeft) {
@@ -73,25 +73,32 @@ namespace Matemator {
         private TextBox[] rights = new TextBox[8];
         private TextBox[] results = new TextBox[8];
 
-        private void textChanged(object sender, EventArgs e) {
+        private void AnyTextChanged(object sender, EventArgs e) {
+            bool any_red = false;
+
             for (int k = 0; k < challenges.Length; ++k) {
+
                 if (!int.TryParse(lefts[k].Text, out int left)) {
                     lefts[k].ForeColor = System.Drawing.Color.Red;
+                    any_red = true;
                     continue;
                 }
 
                 if (!int.TryParse(rights[k].Text, out int right)) {
                     rights[k].ForeColor = System.Drawing.Color.Red;
+                    any_red = true;
                     continue;
                 }
 
                 if (!int.TryParse(results[k].Text, out int result)) {
                     results[k].ForeColor = System.Drawing.Color.Red;
+                    any_red = true;
                     continue;
                 }
 
                 System.Drawing.Color color = challenges[k].Check(left, right, result) ?
                     System.Drawing.Color.Green : System.Drawing.Color.Red;
+                any_red |= color == System.Drawing.Color.Red;
 
                 if (!challenges[k].ShowLeft) {
                     lefts[k].ForeColor = color;
@@ -104,7 +111,19 @@ namespace Matemator {
                 if (!challenges[k].ShowResult) {
                     results[k].ForeColor = color;
                 }
+
             }
+
+            if (!any_red) {
+
+                for (int k = 0; k < challenges.Length; ++k) {
+                    lefts[k].ReadOnly = true;
+                    rights[k].ReadOnly = true;
+                    results[k].ReadOnly = true;
+                }
+
+            }
+
         }
     }
 

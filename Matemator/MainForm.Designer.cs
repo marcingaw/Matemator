@@ -73,7 +73,7 @@
             this.left_00.Size = new System.Drawing.Size(100, 44);
             this.left_00.TabIndex = 1;
             this.left_00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_00.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_00.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // right_00
             // 
@@ -83,7 +83,7 @@
             this.right_00.Size = new System.Drawing.Size(100, 44);
             this.right_00.TabIndex = 2;
             this.right_00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_00.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_00.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // op_00
             // 
@@ -115,7 +115,7 @@
             this.result_00.Size = new System.Drawing.Size(100, 44);
             this.result_00.TabIndex = 5;
             this.result_00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_00.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_00.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_01
             // 
@@ -125,7 +125,7 @@
             this.result_01.Size = new System.Drawing.Size(100, 44);
             this.result_01.TabIndex = 10;
             this.result_01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_01.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_01.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_01
             // 
@@ -157,7 +157,7 @@
             this.right_01.Size = new System.Drawing.Size(100, 44);
             this.right_01.TabIndex = 7;
             this.right_01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_01.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_01.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_01
             // 
@@ -167,7 +167,7 @@
             this.left_01.Size = new System.Drawing.Size(100, 44);
             this.left_01.TabIndex = 6;
             this.left_01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_01.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_01.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_03
             // 
@@ -177,7 +177,7 @@
             this.result_03.Size = new System.Drawing.Size(100, 44);
             this.result_03.TabIndex = 20;
             this.result_03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_03.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_03.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_03
             // 
@@ -209,7 +209,7 @@
             this.right_03.Size = new System.Drawing.Size(100, 44);
             this.right_03.TabIndex = 17;
             this.right_03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_03.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_03.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_03
             // 
@@ -219,7 +219,7 @@
             this.left_03.Size = new System.Drawing.Size(100, 44);
             this.left_03.TabIndex = 16;
             this.left_03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_03.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_03.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_02
             // 
@@ -229,7 +229,7 @@
             this.result_02.Size = new System.Drawing.Size(100, 44);
             this.result_02.TabIndex = 15;
             this.result_02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_02.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_02.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_02
             // 
@@ -261,7 +261,7 @@
             this.right_02.Size = new System.Drawing.Size(100, 44);
             this.right_02.TabIndex = 12;
             this.right_02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_02.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_02.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_02
             // 
@@ -271,7 +271,7 @@
             this.left_02.Size = new System.Drawing.Size(100, 44);
             this.left_02.TabIndex = 11;
             this.left_02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_02.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_02.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_07
             // 
@@ -281,7 +281,7 @@
             this.result_07.Size = new System.Drawing.Size(100, 44);
             this.result_07.TabIndex = 40;
             this.result_07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_07.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_07.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_07
             // 
@@ -313,7 +313,7 @@
             this.right_07.Size = new System.Drawing.Size(100, 44);
             this.right_07.TabIndex = 37;
             this.right_07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_07.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_07.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_07
             // 
@@ -323,7 +323,7 @@
             this.left_07.Size = new System.Drawing.Size(100, 44);
             this.left_07.TabIndex = 36;
             this.left_07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_07.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_07.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_06
             // 
@@ -333,7 +333,7 @@
             this.result_06.Size = new System.Drawing.Size(100, 44);
             this.result_06.TabIndex = 35;
             this.result_06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_06.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_06.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_06
             // 
@@ -365,7 +365,7 @@
             this.right_06.Size = new System.Drawing.Size(100, 44);
             this.right_06.TabIndex = 32;
             this.right_06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_06.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_06.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_06
             // 
@@ -375,7 +375,7 @@
             this.left_06.Size = new System.Drawing.Size(100, 44);
             this.left_06.TabIndex = 31;
             this.left_06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_06.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_06.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_05
             // 
@@ -385,7 +385,7 @@
             this.result_05.Size = new System.Drawing.Size(100, 44);
             this.result_05.TabIndex = 30;
             this.result_05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_05.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_05.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_05
             // 
@@ -417,7 +417,7 @@
             this.right_05.Size = new System.Drawing.Size(100, 44);
             this.right_05.TabIndex = 27;
             this.right_05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_05.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_05.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_05
             // 
@@ -427,7 +427,7 @@
             this.left_05.Size = new System.Drawing.Size(100, 44);
             this.left_05.TabIndex = 26;
             this.left_05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_05.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_05.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // result_04
             // 
@@ -437,7 +437,7 @@
             this.result_04.Size = new System.Drawing.Size(100, 44);
             this.result_04.TabIndex = 25;
             this.result_04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result_04.TextChanged += new System.EventHandler(this.textChanged);
+            this.result_04.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // eq_04
             // 
@@ -469,7 +469,7 @@
             this.right_04.Size = new System.Drawing.Size(100, 44);
             this.right_04.TabIndex = 22;
             this.right_04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.right_04.TextChanged += new System.EventHandler(this.textChanged);
+            this.right_04.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // left_04
             // 
@@ -479,7 +479,7 @@
             this.left_04.Size = new System.Drawing.Size(100, 44);
             this.left_04.TabIndex = 21;
             this.left_04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.left_04.TextChanged += new System.EventHandler(this.textChanged);
+            this.left_04.TextChanged += new System.EventHandler(this.AnyTextChanged);
             // 
             // MainForm
             // 
