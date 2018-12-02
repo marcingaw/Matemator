@@ -7,124 +7,96 @@ namespace Matemator {
 
         public MainForm() {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void MainForm_Load(object sender, EventArgs e) {
-            lefts[0] = left_00;
-            lefts[1] = left_01;
-            lefts[2] = left_02;
-            lefts[3] = left_03;
-            lefts[4] = left_04;
-            lefts[5] = left_05;
-            lefts[6] = left_06;
-            lefts[7] = left_07;
-
-            ops[0] = op_00;
-            ops[1] = op_01;
-            ops[2] = op_02;
-            ops[3] = op_03;
-            ops[4] = op_04;
-            ops[5] = op_05;
-            ops[6] = op_06;
-            ops[7] = op_07;
-
-            rights[0] = right_00;
-            rights[1] = right_01;
-            rights[2] = right_02;
-            rights[3] = right_03;
-            rights[4] = right_04;
-            rights[5] = right_05;
-            rights[6] = right_06;
-            rights[7] = right_07;
-
-            results[0] = result_00;
-            results[1] = result_01;
-            results[2] = result_02;
-            results[3] = result_03;
-            results[4] = result_04;
-            results[5] = result_05;
-            results[6] = result_06;
-            results[7] = result_07;
-
-            for (int k = 0; k < challenges.Length; k++) {
-                challenges[k] = new Challenge(100, false);
-                ops[k].Text = "" + challenges[k].Operator;
-
-                if (challenges[k].ShowLeft) {
-                    lefts[k].Text = "" + challenges[k].Left;
-                    lefts[k].ReadOnly = true;
+            int range = 100;
+            bool withDiv = true;
+            foreach (string cmdArg in Environment.GetCommandLineArgs()) {
+                if (cmdArg.Equals("nodiv")) {
+                    withDiv = false;
                 }
-
-                if (challenges[k].ShowRight) {
-                    rights[k].Text = "" + challenges[k].Right;
-                    rights[k].ReadOnly = true;
+                if (cmdArg.StartsWith("range=")) {
+                    range = Int32.Parse(cmdArg.Substring(cmdArg.IndexOf('=') + 1));
                 }
-
-                if (challenges[k].ShowResult) {
-                    results[k].Text = "" + challenges[k].Result;
-                    results[k].ReadOnly = true;
+            }
+            Lefts[0] = left00; Ops[0] = op00; Rights[0] = right00; Results[0] = result00;
+            Lefts[1] = left01; Ops[1] = op01; Rights[1] = right01; Results[1] = result01;
+            Lefts[2] = left02; Ops[2] = op02; Rights[2] = right02; Results[2] = result02;
+            Lefts[3] = left03; Ops[3] = op03; Rights[3] = right03; Results[3] = result03;
+            Lefts[4] = left04; Ops[4] = op04; Rights[4] = right04; Results[4] = result04;
+            Lefts[5] = left05; Ops[5] = op05; Rights[5] = right05; Results[5] = result05;
+            Lefts[6] = left06; Ops[6] = op06; Rights[6] = right06; Results[6] = result06;
+            Lefts[7] = left07; Ops[7] = op07; Rights[7] = right07; Results[7] = result07;
+            Lefts[8] = left08; Ops[8] = op08; Rights[8] = right08; Results[8] = result08;
+            Lefts[9] = left09; Ops[9] = op09; Rights[9] = right09; Results[9] = result09;
+            Lefts[10] = left10; Ops[10] = op10; Rights[10] = right10; Results[10] = result10;
+            Lefts[11] = left11; Ops[11] = op11; Rights[11] = right11; Results[11] = result11;
+            for (int k = 0; k < Challenges.Length; k++) {
+                Challenges[k] = new Challenge(range, withDiv);
+                Ops[k].Text = "" + Challenges[k].Operator;
+                if (Challenges[k].ShowLeft) {
+                    Lefts[k].Text = "" + Challenges[k].Left;
+                    Lefts[k].ReadOnly = true;
+                }
+                if (Challenges[k].ShowRight) {
+                    Rights[k].Text = "" + Challenges[k].Right;
+                    Rights[k].ReadOnly = true;
+                }
+                if (Challenges[k].ShowResult) {
+                    Results[k].Text = "" + Challenges[k].Result;
+                    Results[k].ReadOnly = true;
                 }
             }
         }
 
-        private Challenge[] challenges = new Challenge[8];
-        private TextBox[] lefts = new TextBox[8];
-        private Label[] ops = new Label[8];
-        private TextBox[] rights = new TextBox[8];
-        private TextBox[] results = new TextBox[8];
+        private Challenge[] Challenges = new Challenge[12];
+        private TextBox[] Lefts = new TextBox[12];
+        private Label[] Ops = new Label[12];
+        private TextBox[] Rights = new TextBox[12];
+        private TextBox[] Results = new TextBox[12];
 
         private void AnyTextChanged(object sender, EventArgs e) {
-            bool any_red = false;
-
-            for (int k = 0; k < challenges.Length; ++k) {
-
-                if (!int.TryParse(lefts[k].Text, out int left)) {
-                    lefts[k].ForeColor = System.Drawing.Color.Red;
-                    any_red = true;
+            bool anyRed = false;
+            for (int k = 0; k < Challenges.Length; ++k) {
+                if (!int.TryParse(Lefts[k].Text, out int left)) {
+                    Lefts[k].ForeColor = System.Drawing.Color.Red;
+                    anyRed = true;
                     continue;
                 }
-
-                if (!int.TryParse(rights[k].Text, out int right)) {
-                    rights[k].ForeColor = System.Drawing.Color.Red;
-                    any_red = true;
+                if (!int.TryParse(Rights[k].Text, out int right)) {
+                    Rights[k].ForeColor = System.Drawing.Color.Red;
+                    anyRed = true;
                     continue;
                 }
-
-                if (!int.TryParse(results[k].Text, out int result)) {
-                    results[k].ForeColor = System.Drawing.Color.Red;
-                    any_red = true;
+                if (!int.TryParse(Results[k].Text, out int result)) {
+                    Results[k].ForeColor = System.Drawing.Color.Red;
+                    anyRed = true;
                     continue;
                 }
-
-                System.Drawing.Color color = challenges[k].Check(left, right, result) ?
+                System.Drawing.Color color = Challenges[k].Check(left, right, result) ?
                     System.Drawing.Color.Green : System.Drawing.Color.Red;
-                any_red |= color == System.Drawing.Color.Red;
-
-                if (!challenges[k].ShowLeft) {
-                    lefts[k].ForeColor = color;
+                anyRed |= color == System.Drawing.Color.Red;
+                if (!Challenges[k].ShowLeft) {
+                    Lefts[k].ForeColor = color;
                 }
-
-                if (!challenges[k].ShowRight) {
-                    rights[k].ForeColor = color;
+                if (!Challenges[k].ShowRight) {
+                    Rights[k].ForeColor = color;
                 }
-
-                if (!challenges[k].ShowResult) {
-                    results[k].ForeColor = color;
+                if (!Challenges[k].ShowResult) {
+                    Results[k].ForeColor = color;
                 }
-
             }
-
-            if (!any_red) {
-
-                for (int k = 0; k < challenges.Length; ++k) {
-                    lefts[k].ReadOnly = true;
-                    rights[k].ReadOnly = true;
-                    results[k].ReadOnly = true;
+            if (!anyRed) {
+                for (int k = 0; k < Challenges.Length; ++k) {
+                    Lefts[k].ReadOnly = true;
+                    Rights[k].ReadOnly = true;
+                    Results[k].ReadOnly = true;
                 }
-
             }
-
         }
+
     }
 
 }
